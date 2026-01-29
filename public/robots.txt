@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.margdarshak.com/sitemap.xml
+
+# Crawl-delay: 5
+# Host: https://www.margdarshak.com
