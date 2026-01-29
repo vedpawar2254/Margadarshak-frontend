@@ -483,7 +483,9 @@ function OptionsEditor({ questionId, options: initialOptions, refreshQuestions }
 
     // Sync options when prop updates
     useEffect(() => {
-        setOptions(initialOptions || []);
+        if (initialOptions !== undefined) {
+            setTimeout(() => setOptions(initialOptions || []), 0);
+        }
     }, [initialOptions]);
 
     const addOption = async () => {

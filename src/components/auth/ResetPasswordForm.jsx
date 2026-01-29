@@ -209,7 +209,7 @@ const ResetPasswordForm = () => {
 
                 <div className="mt-10 text-center">
                     <p className="text-sm text-gray-500">
-                        Didn&apos;t receive the code? Check your spam folder or <button
+                        Didn't receive the code? Check your spam folder or <button
                             type="button"
                             className="text-[#003B73] font-semibold hover:underline"
                             onClick={() => router.push('/forgot-password')} // Go back to forgot password page

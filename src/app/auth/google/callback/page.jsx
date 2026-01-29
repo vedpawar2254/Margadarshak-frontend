@@ -1,16 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 
-/**
- * Google OAuth Callback Page
- * 
- * Handles the redirect from Google OAuth with token in URL params.
- * Stores token, verifies auth, and redirects to intended destination.
- */
-export default function GoogleCallbackPage() {
+function CallbackContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { verifyToken } = useAuth();
@@ -169,5 +163,13 @@ export default function GoogleCallbackPage() {
                 }
             `}</style>
         </div>
+    );
+}
+
+export default function GoogleCallbackPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <CallbackContent />
+        </Suspense>
     );
 }

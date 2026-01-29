@@ -50,7 +50,7 @@ const OTPForm = ({ onVerify, onResend, email, isLoading }) => {
             <div className="mb-8 text-center lg:text-left">
                 <h2 className="text-2xl font-bold text-gray-900">Verify your email</h2>
                 <p className="mt-1 text-sm text-gray-500">
-                    We&apos;ve sent a 6-digit code to <span className="font-semibold text-gray-900">{email}</span>
+                    We've sent a 6-digit code to <span className="font-semibold text-gray-900">{email}</span>
                 </p>
             </div>
 
@@ -82,7 +82,7 @@ const OTPForm = ({ onVerify, onResend, email, isLoading }) => {
 
             <div className="mt-8 text-center lg:text-left">
                 <p className="text-sm text-gray-500">
-                    Didn&apos;t receive the code?{" "}
+                    Didn't receive the code?{" "}
                     {timer > 0 ? (
                         <span className="text-gray-400 font-medium">Resend in {timer}s</span>
                     ) : (

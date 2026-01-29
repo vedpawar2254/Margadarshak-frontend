@@ -113,7 +113,7 @@ const ForgotPasswordForm = () => {
                     </Button>
                 </div>
                 <p className="mt-8 text-sm text-gray-500">
-                    Didn&apos;t receive the email?{" "}
+                    Didn't receive the email?{" "}
                     <button
                         type="button"
                         className={`font-semibold ${canResendOtp ? 'text-[#003B73] hover:underline' : 'text-gray-400 cursor-not-allowed'}`}
@@ -143,13 +143,13 @@ const ForgotPasswordForm = () => {
             <div className="mb-10 text-center lg:text-left">
                 <h2 className="text-3xl font-bold text-gray-900">Forgot your password?</h2>
                 <p className="mt-2 text-gray-500">
-                    No worries, we&apos;ll send you an OTP to reset your password
+                    No worries, we'll send you an OTP to reset your password
                 </p>
             </div>
 
             <div className="bg-blue-50 border border-blue-100 p-6 rounded-xl mb-10">
                 <p className="text-sm text-blue-800 leading-relaxed">
-                    Enter the email address associated with your account and we&apos;ll send you a 6-digit OTP to reset your password.
+                    Enter the email address associated with your account and we'll send you a 6-digit OTP to reset your password.
                 </p>
             </div>
 
@@ -209,7 +209,7 @@ const ForgotPasswordForm = () => {
 
             <div className="mt-12 text-center">
                 <p className="text-gray-500 text-sm">
-                    Don&apos;t have an account?{" "}
+                    Don't have an account?{" "}
                     <Link
                         href="/register"
                         className="font-bold text-[#003B73] hover:underline"

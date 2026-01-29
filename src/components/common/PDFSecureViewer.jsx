@@ -47,9 +47,13 @@ const PDFSecureViewer = ({ url, watermarkText = 'Protected Content' }) => {
 
     // Reset page number when URL changes (module switch)
     useEffect(() => {
-        setPageNumber(1);
-        setLoading(true);
-        setError(null);
+        if (url) {
+            setTimeout(() => {
+                setPageNumber(1);
+                setLoading(true);
+                setError(null);
+            }, 0);
+        }
     }, [url]);
 
     // Responsive container width

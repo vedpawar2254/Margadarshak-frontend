@@ -20,10 +20,10 @@ export default function AdminLayout({ children }) {
             } else if (user.email !== ADMIN_EMAIL) {
                 router.push('/');
             } else {
-                setIsAuthorized(true);
+                setTimeout(() => setIsAuthorized(true), 0);
             }
         }
-    }, [user, loading, router]);
+    }, [loading, user, router]);
 
     if (loading) {
         return (

@@ -348,7 +348,7 @@ const RegisterForm = () => {
                         <div className="text-center mb-6">
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Verify Your Account</h3>
                             <p className="text-gray-500">
-                                We&apos;ve sent a 6-digit code to <span className="font-semibold">{formData.email}</span>
+                                We've sent a 6-digit code to <span className="font-semibold">{formData.email}</span>
                             </p>
                         </div>
 
@@ -373,7 +373,7 @@ const RegisterForm = () => {
                         </div>
 
                         <div className="text-center text-sm text-gray-500 mb-6">
-                            Didn&apos;t receive the code?{" "}
+                            Didn't receive the code?{" "}
                             <button
                                 type="button"
                                 className={`font-semibold ${canResendOtp ? 'text-[#003B73] hover:underline' : 'text-gray-400 cursor-not-allowed'}`}

@@ -121,8 +121,7 @@ export default function ProfileDialog({ isOpen, onClose }) {
                 <button
                     ref={firstFocusableRef}
                     onClick={handleManageAccount}
-                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left
-                               text-gray-700 hover:bg-gray-50 transition-colors duration-150"
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-gray-700 hover:bg-gray-50 transition-colors duration-150"
                 >
                     <span className="text-xl">👤</span>
                     <span className="font-medium">Manage Account</span>
@@ -130,8 +129,7 @@ export default function ProfileDialog({ isOpen, onClose }) {
 
                 <button
                     onClick={handleLogout}
-                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left
-                               text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-150"
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-150"
                 >
                     <span className="text-xl">🚪</span>
                     <span className="font-medium">Sign Out</span>
