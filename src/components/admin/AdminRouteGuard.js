@@ -27,14 +27,29 @@ const AdminRouteGuard = ({ children }) => {
 
         const data = await response.json();
 
+        // Debug logging
+        console.log('🔍 Profile response:', JSON.stringify(data, null, 2));
+        console.log('📋 Data structure:', JSON.stringify(data, null, 2));
+        console.log('✅ Success:', data.success);
+        console.log('📧 Data type:', typeof data.data);
+
         if (data.success) {
           const userEmail = data.data?.email;
-          if (userEmail === 'namanjainpy@gmail.com') {
+          const studentEmail = data.data?.student?.email || data.data?.email;
+
+          console.log('📧 Extracted email:', userEmail);
+          console.log('📧 Student email:', studentEmail);
+          console.log('✅ Admin check:', studentEmail === 'namanjainpy@gmail.com');
+
+          if (studentEmail === 'namanjainpy@gmail.com') {
+            console.log('✅ Admin confirmed');
             setIsAdmin(true);
           } else {
+            console.log('❌ Not admin, redirecting to login');
             router.push('/login');
           }
         } else {
+          console.log('❌ API failed, redirecting to login');
           router.push('/login');
         }
       } catch (error) {
