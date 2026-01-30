@@ -15,7 +15,7 @@ const AdminRouteGuard = ({ children }) => {
       try {
         const token = localStorage.getItem('token');
         if (!token) {
-          router.push('/admin/login');
+          router.push('/login');
           return;
         }
 
@@ -32,21 +32,21 @@ const AdminRouteGuard = ({ children }) => {
           if (userEmail === 'namanjainpy@gmail.com') {
             setIsAdmin(true);
           } else {
-            router.push('/admin/login');
+            router.push('/login');
           }
         } else {
-          router.push('/admin/login');
+          router.push('/login');
         }
       } catch (error) {
         console.error('Error checking admin access:', error);
-        router.push('/admin/login');
+        router.push('/login');
       } finally {
         setIsLoading(false);
       }
     };
 
     // Skip check if on login page
-    if (pathname === '/admin/login') {
+    if (pathname === '/login') {
       setIsLoading(false);
       return;
     }
@@ -62,7 +62,7 @@ const AdminRouteGuard = ({ children }) => {
     );
   }
 
-  if (!isAdmin && pathname !== '/admin/login') {
+  if (!isAdmin && pathname !== '/login') {
     return null; // Will redirect in useEffect
   }
 

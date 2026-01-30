@@ -64,16 +64,16 @@ const AdminPage = () => {
         }
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        if (data.success) {
-          setUser(data.data);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            setUser(data.data);
+          } else {
+            router.push('/login');
+          }
         } else {
-          router.push('/admin/login');
+          router.push('/login');
         }
-      } else {
-        router.push('/admin/login');
-      }
     } catch (error) {
       console.error('Error fetching user data:', error);
       router.push('/login');
@@ -143,7 +143,7 @@ const AdminPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    router.push('/admin/login');
+    router.push('/login');
   };
 
   const handleFileChange = (e) => {
