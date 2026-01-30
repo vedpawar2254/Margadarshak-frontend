@@ -65,7 +65,7 @@ const LoginForm = () => {
             if (redirectIntent) {
                 // User had an intended destination - go there
                 router.push(redirectIntent);
-            } else if (user?.email === 'naman**j**ainpy@gmail.com') {
+            } else if (user?.email === 'namanjainpy@gmail.com') {
                 router.push("/admin");
             } else {
                 router.push("/courses");
